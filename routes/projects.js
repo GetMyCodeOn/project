@@ -3,7 +3,7 @@ var router = express.Router(); //need the router method in express
 var db = require('../models/projects.js');
 /* GET users listing. */
 router.get('/', function(req, res) {
-  response.writeHead(200, {"Content-Type": "text/json", 'Access-Control-Allow-Origin': '*'});
+  res.writeHead(200, {"Content-Type": "json", 'Access-Control-Allow-Origin': '*'});
   res.send(db);
 
 //res= response. Not building a template, sending some data back
