@@ -16,6 +16,12 @@ var projects = require('./routes/projects');
 
 var app = express(); 
 
+app.all('/', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views')); //templates sitting inside folder called views 
 app.set('view engine', 'jade'); //using jade for templating
