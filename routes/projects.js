@@ -1,6 +1,14 @@
 var express = require('express'); //need express methods
 var router = express.Router(); //need the router method in express
 var db = require('../models/projects.js');
+
+app.all('/', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
+
+
 /* GET users listing. */
 router.get('/', function(req, res) {
   res.json(db);
