@@ -8,7 +8,7 @@ module.exports = [
         ressources: "3 shovels, 4 donkey nail files", 
         location: "Kent Donkey Sanctuary", 
         charity: "Donkey'R'Us",
-        picture: "saint_cosme.jpg"
+        picture: "./donkey.jpg"
     },
     {
         name: "Surprise Spider Petting Zoo",
@@ -19,5 +19,5 @@ module.exports = [
         ressources: "Spiders, slingshots, and spider food",
         location: "King's Cross Station", 
         charity: "Spidertouchers",
-        picture: "saint_cosme.jpg"
+        picture: "./spider.jpg"
     }];
