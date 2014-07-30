@@ -3,7 +3,7 @@ var router = express.Router(); //need the router method in express
 var db = require('../models/projects.js');
 /* GET users listing. */
 router.get('/', function(req, res) {
-  res.json(quotes);
+  res.json(db);
 
 //res= response. Not building a template, sending some data back
 }); //controller: given some route, what you should do in repsonse to it
