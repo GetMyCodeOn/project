@@ -5,8 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongo = require('mongoskin'); 
-var db = mongo.db("mongodb://heroku_app27951341:lhu2qd9q469m03aq25iko1oup9@ds059908.m
-ongolab.com:59908/heroku_app27951341", {native_parser:true});
+var db = mongo.db("mongodb://heroku_app27951341:lhu2qd9q469m03aq25iko1oup9@ds059908.mongolab.com:59908/heroku_app27951341", {native_parser:true});
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
