@@ -5,8 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongo = require('mongoskin'); 
-var secret = require('./secret.js');
-var db = mongo.db(secret, {native_parser:true});
+var mongoUri = process.env.MONGOLAB_URI;
+var db = mongo.db(mongoUri, {native_parser:true});
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
