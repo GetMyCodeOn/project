@@ -3,9 +3,12 @@
 <head></head>
 <body>
 <center>
-  <h2>Latest from twitter</h2>
+  <h2>Projects</h2>
   <div id='projects'></div>
   <img>
+  <div id='cool'> <ul>
+    <ul></ul>
+  
 </center>
 
 
@@ -13,21 +16,36 @@
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script>
+
+$.getJSON("http://arcane-spire-9022.herokuapp.com/projects", function(json) {
+document.write(json[0].charity)
+});
+
   $.ajax({
     url: "http://arcane-spire-9022.herokuapp.com/projects",
     dataType: "json",
 
     success: function(data) {
          $.each(data, function () {
-           console.log(data.statuses);
+           console.log(JSON.parse(data))
+
+
+           
         $( "#projects" )
         .append($('<img>', {
           src: this['picture'],
           style: "padding-top:10px"
+          }));
+         $( "#projects" )
+        .append($('<img>', {
+          src: this['picture'],
+          style: "padding-top:10px"
         }));
+
       });
     }
   });
-</script>
+
+  </script>
 </body>
 </html>
